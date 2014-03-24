@@ -9,9 +9,14 @@ Install the driver:
 
 $ make install
 
-You also need to copy ipheth-modprobe.conf to /etc/modprobe.d directory. This
-will ensure that the device pairing will always take place after module
-loading.
+A modprobe configuration file is also provided that will run the
+device pairing utility provided by ipheth-pair when the ipheth
+module is loaded by the kernel. This will ensure that any devices
+connected to the system that cause the loading of the module will
+also be paired to the system. However, this functionality is also
+provided (in an arguably better way) by the udev rules that ship
+with ipheth-pair, so it is not necessary to install this file.
+Unless you really want to :)
 
 For more info: http://giagio.com/wiki/moin.cgi/iPhoneEthernetDriver
 
