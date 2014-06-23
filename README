@@ -1,6 +1,11 @@
 iPhone USB Ethernet Driver for Linux
 ------------------------------------
 
+This is the excellent ipeth iPhone Ethernet driver forked from dgiagio/ipheth, with the following changes:
+
+- working modprobe config file (now runs pair script at default install location [see ipheth-pair])
+- working udev rules (matcher is subsystem 'usb' + vendor ID for Apple rather than subsystem 'net' with driver 'ipheth')
+
 Directory listing:
 
 /ipheth-driver	- Kernel driver
